@@ -22,7 +22,7 @@ def main(source, width=256, height=256):
     j = 0
     for ix in range(x_steps):
         for iy in range(y_steps):
-            area = (ix*width+1, iy*height+1, (ix+1)*width, (iy+1)*height)
+            area = (ix*width, iy*height, (ix+1)*width, (iy+1)*height)
             img.crop(area).save(source_splitext[0] + '_crop_{:03d}'.format(j) + source_splitext[1])
             j += 1
             
